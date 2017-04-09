@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">C.U.C</string>
+    <string name="app_full_name">Ce? Unde? Cînd?</string>
+    <string name="app_quote_text">\" The function of education is to teach one to think intensively and to think critically. Intelligence plus character - that is the goal of true education. \"</string>
+    <string name="app_question_1_text">Continue the sequence: love, breath, Rome, estate, column, sense, heaven...</string>
+    <string name="app_question_1_solution_text">Wonder. (The question is based upon popular set expressions: the first love, the second breath, the third Rome, the fourth estate, the fifth column, the sixth sense, the seventh heaven, and the eighth wonder.)</string>
+    <string name="app_question_1_hint_text_1">The first love...</string>
+    <string name="app_achievements_text">Achievements</string>
+    <string name="app_statistics_text">Feedback</string>
+    <string name="app_help_text">Help</string>
+    <string name="app_hint_text">Hint</string>
+    <string name="app_solution_text">Solution</string>
+    <string name="app_play_text">Play</string>
+
+    <string name="app_set_1_question_1_text">In November 2014, it was reported that a number of television programmes, had been banned in military schools belonging to the Turkish army, in order to protect young people from: \"sexual exploitation, pornography, exhibitionism, abuse, harassment and all negative behaviours\" (dragons weren\'t mentioned). According to a report in the Turkish daily newspaper Cumhuriyet, this isn\'t the first time that X has caused trouble within the country\'s army. </string>
+
+    <string name="app_set_1_question_2_text">(An old map of England is given here.) Using a map like this, Edmond Halley became the first to measure the area of each country in England. What simple method did he use to do so if he only knew the area of the country of Kent?</string>
+
+    <string name="app_set_1_question_3_blitz_text_1">What is the word for \"lightning\" in German?</string>
+    <string name="app_set_1_question_3_blitz_text_2">What place, according to Mark Twain, has the highest rate of mortality?</string>
+
+    <string name="app_set_1_question_4_text">No modern book has aroused so much talk as the one in the black box. What book is it?</string>
+
+    <string name="app_set_1_question_5_text">(Two different pieces of music from J. S. Bach\'s exercises are played to the experts.) The black box contains a thing which can be placed between these two pieces. What is it?</string>
+</resources>
