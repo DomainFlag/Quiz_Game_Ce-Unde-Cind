@@ -24,6 +24,7 @@ import static com.example.cchiv.wwwwhatwherewhen.MainActivity.array_sets_complet
  */
 
 public class QuizActivity extends AppCompatActivity{
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +32,39 @@ public class QuizActivity extends AppCompatActivity{
     }
 
     int score = 0;
+    MediaPlayer MP1;
+    MediaPlayer MP2;
 
+    /**
+     * Media Player Setting
+     */
+    public void set_music_1(View view) {
+        if(MP1 == null) {
+            if(MP2 != null) {
+                MP2.stop();
+                MP2 = null;
+            }
+            MP1 = MediaPlayer.create(this, R.raw.mc_music_1);
+            MP1.start();
+        } else {
+            MP1.stop();
+            MP1 = null;
+        }
+    }
+
+    public void set_music_2(View view) {
+        if(MP2 == null) {
+            if(MP1 != null) {
+                MP1.stop();
+                MP1 = null;
+            }
+            MP2 = MediaPlayer.create(this, R.raw.mc_music_1);
+            MP2.start();
+        } else {
+            MP2.stop();
+            MP2 = null;
+        }
+    }
     /**
      * Matcher for quiz questions
      * */
@@ -63,15 +96,6 @@ public class QuizActivity extends AppCompatActivity{
         return toastText;
     }
 
-    public void set_music_1(View view) {
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.mc_music_1);
-        mp.start();
-    }
-
-    public void set_music_2(View view) {
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.mc_music_2);
-        mp.start();
-    }
 
     public void activity_quiz_set_question_2(View view) {
         EditText editText = (EditText) findViewById(R.id.answer);

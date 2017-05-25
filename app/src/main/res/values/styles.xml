@@ -8,4 +8,107 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppQuestionHeader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:textSize">@dimen/activity_header_size</item>
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="AppQuestionSubheader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="AppQuestionScroll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_margin">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="AppQuestionText">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="android:textSize">@dimen/activity_paragraph_size</item>
+    </style>
+
+    <style name="AppActionLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/activity_horizontal_margin</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="AppActionInput">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="AppActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/textIcons</item>
+    </style>
+
+    <style name="AppCardLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="AppImageQuestionLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/activity_vertical_margin</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="AppQuestionImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/activity_horizontal_margin</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <style name="AppQuestionBlitzInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="AppMainLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/activity_horizontal_margin</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="AppQuestionBlitzScroll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+    </style>
+
 </resources>

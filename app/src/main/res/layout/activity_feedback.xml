@@ -1,151 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/activity_vertical_margin"
-    android:layout_marginTop="@dimen/activity_vertical_margin"
-    android:layout_marginRight="@dimen/activity_horizontal_margin"
-    android:layout_marginLeft="@dimen/activity_horizontal_margin" >
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:layout_margin="@dimen/activity_horizontal_margin">
 
-        <TextView
-            android:gravity="center_horizontal"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Feedback Matters"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="24sp" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:text="Rate from 0 to 5 your satisfaction with the app?"/>
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_feedback_header"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/activity_header_size" />
 
-
-        <RadioGroup
-            android:id="@+id/radio_group"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal">
-
-            <RadioButton
-                android:id="@+id/radio_button_0"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/activity_feedback_question_1"
+                android:textSize="@dimen/activity_subheader_size"/>
 
-            <RadioButton
-                android:id="@+id/radio_button_1"
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_button_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+
+                <RadioButton
+                    android:id="@+id/radio_button_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2" />
+
+
+                <RadioButton
+                    android:id="@+id/radio_button_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3" />
+
+
+                <RadioButton
+                    android:id="@+id/radio_button_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4" />
+
+
+                <RadioButton
+                    android:id="@+id/radio_button_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5" />
+
+            </RadioGroup>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1" />
+                android:textSize="@dimen/activity_subheader_size"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="Check the features you would like to see in the upcoming new version?"/>
 
-
-            <RadioButton
-                android:id="@+id/radio_button_2"
+            <CheckBox
+                android:id="@+id/checkbox_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2" />
+                android:text="@string/activity_feedback_checkbox_0"/>
 
-
-            <RadioButton
-                android:id="@+id/radio_button_3"
+            <CheckBox
+                android:id="@+id/checkbox_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3" />
+                android:text="@string/activity_feedback_checkbox_1"/>
 
-
-            <RadioButton
-                android:id="@+id/radio_button_4"
+            <CheckBox
+                android:id="@+id/checkbox_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4" />
+                android:text="@string/activity_feedback_checkbox_2"/>
 
-
-            <RadioButton
-                android:id="@+id/radio_button_5"
+            <CheckBox
+                android:id="@+id/checkbox_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5" />
+                android:text="@string/activity_feedback_checkbox_3"/>
 
-        </RadioGroup>
+            <CheckBox
+                android:id="@+id/checkbox_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_feedback_checkbox_4"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:text="Check the features you would like to see in the upcoming new version?"/>
+            <CheckBox
+                android:id="@+id/checkbox_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_feedback_checkbox_5"/>
 
-        <CheckBox
-            android:id="@+id/checkbox_0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New compelling game modes"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/activity_subheader_size"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/activity_feedback_question_3"/>
 
-        <CheckBox
-            android:id="@+id/checkbox_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="More missions sets"/>
+            <EditText
+                android:id="@+id/improvement_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:background="@color/dividerColor"
+                android:inputType="textMultiLine"/>
 
-        <CheckBox
-            android:id="@+id/checkbox_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="More variety of questions"/>
+            <Button
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="submit"
+                android:textColor="@color/textIcons"
+                android:backgroundTint="@color/colorPrimary"
+                android:onClick="submit_feedback" />
 
-        <CheckBox
-            android:id="@+id/checkbox_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="A more intelligent evaluator for answers"/>
+        </LinearLayout>
 
-        <CheckBox
-            android:id="@+id/checkbox_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add chat feature and social networks integration into the app"/>
+    </ScrollView>
 
-        <CheckBox
-            android:id="@+id/checkbox_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add hints to the questions"/>
+    <include layout="@layout/activity_lowerbar" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:text="You have any great ideas to make the app better, write it down"/>
-
-        <EditText
-            android:id="@+id/improvement_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minLines="3"
-            android:background="@color/dividerColor"
-            android:inputType="textMultiLine"/>
-
-        <Button
-            android:layout_gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="submit"
-            android:backgroundTint="@color/colorPrimary"
-            android:onClick="submit_feedback" />
-
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

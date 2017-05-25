@@ -13,6 +13,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.view.View.GONE;
+import static com.example.cchiv.wwwwhatwherewhen.R.string.app_question_1_solution_text;
+
 public class MainActivity extends AppCompatActivity {
 
     int index = 0;
@@ -44,13 +47,28 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
 
         /**
-         * Menu Activity
+         * Quiz Activity
          */
-        Button next = (Button) findViewById(R.id.activity_menu);
+        Button next = (Button) findViewById(R.id.quiz_activity);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), MenuActivity.class);
+                Intent myIntent = new Intent(view.getContext(), QuizActivity.class);
                 startActivityForResult(myIntent, 0);
+            }
+        });
+
+        /**
+         * Show Solution Activity
+         */
+        final Button show_solution = (Button) findViewById(R.id.show_solution);
+        show_solution.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                TextView textView = (TextView) findViewById(R.id.question_day);
+                textView.setText(getResources().getString(app_question_1_solution_text));
+
+                show_solution.setVisibility(GONE);
+                Button show_hint = (Button) findViewById(R.id.show_hint);
+                show_hint.setVisibility(GONE);
             }
         });
 
@@ -107,10 +125,4 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, question_day_hint_strings[index], Toast.LENGTH_SHORT).show();
         index = (index+1)%3;
     }
-
-    public void show_solution(View view) {
-        TextView textView = (TextView) findViewById(R.id.text_solution);
-        textView.setVisibility(View.VISIBLE);
-    }
-
 }

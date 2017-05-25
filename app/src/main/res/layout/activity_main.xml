@@ -1,198 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dividerSecondaryColor"
     android:orientation="vertical"
     tools:context="com.example.cchiv.wwwwhatwherewhen.MainActivity">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:background="@color/lightPrimaryColor"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <LinearLayout
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/lightPrimaryColor"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:textSize="12sp"
-                    android:text="@string/app_quote_text"/>
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:src="@drawable/ic_owl"
-                    android:layout_gravity="center_horizontal"/>
-
-                <Button
-                    android:id="@+id/activity_menu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:backgroundTint="@color/textIcons"
-                    android:text="@string/app_play_text" />
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="4dp"
+                app:elevation="6dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/dividerSecondaryColor"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:letterSpacing="0.06"
+                        android:text="@string/app_quote_text"
+                        android:textColor="@color/textIcons"
+                        android:textSize="@dimen/activity_subparagraph_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/ic_owl" />
+
+            <Button
+                android:id="@+id/quiz_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:backgroundTint="@color/textIcons"
+                android:text="@string/app_play_text" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/textIcons"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/activity_vertical_margin"
                         android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
                         android:gravity="center_horizontal"
+                        android:text="@string/app_question_day_title"
                         android:textColor="@color/primaryText"
-                        android:textSize="24sp"
-                        android:text="Question Of The Day"/>
+                        android:textSize="@dimen/activity_header_size" />
 
                     <TextView
+                        android:id="@+id/question_day"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
                         android:layout_marginBottom="@dimen/activity_vertical_margin"
                         android:gravity="center_horizontal"
-                        android:textSize="16sp"
-                        android:text="@string/app_question_1_text"/>
+                        android:text="@string/app_question_1_text"
+                        android:textSize="@dimen/activity_paragraph_size" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
                         android:gravity="center_horizontal">
 
                         <Button
+                            android:id="@+id/show_hint"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/activity_horizontal_margin"
                             android:layout_marginRight="@dimen/activity_horizontal_margin"
-                            android:textColorHighlight="@color/colorPrimaryDark"
-                            android:textColor="@color/primaryText"
-                            android:backgroundTint="@color/textIcons"
+                            android:backgroundTint="@color/lightPrimaryColor"
+                            android:onClick="show_hint"
                             android:text="@string/app_hint_text"
-                            android:onClick="show_hint"/>
+                            android:textColor="@color/primaryText"
+                            android:textColorHighlight="@color/colorPrimaryDark" />
 
                         <Button
+                            android:id="@+id/show_solution"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/activity_horizontal_margin"
                             android:layout_marginRight="@dimen/activity_horizontal_margin"
-                            android:backgroundTint="@color/textIcons"
-                            android:textColor="@color/primaryText"
-                            android:textColorHighlight="@color/colorPrimaryDark"
+                            android:backgroundTint="@color/lightPrimaryColor"
                             android:text="@string/app_solution_text"
-                            android:onClick="show_solution"/>
+                            android:textColor="@color/primaryText"
+                            android:textColorHighlight="@color/colorPrimaryDark" />
 
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/text_solution"
-                        android:layout_width="340dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/activity_vertical_margin"
-                        android:layout_marginBottom="@dimen/activity_vertical_margin"
-                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                        android:layout_marginRight="@dimen/activity_horizontal_margin"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_horizontal"
-                        android:visibility="gone"
-                        android:text="@string/app_question_1_solution_text"/>
-
                 </LinearLayout>
 
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@color/colorPrimary"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/activity_achievements"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center" >
-
-            <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:src="@drawable/ic_achievements"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_achievements_text" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/activity_feedback"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center" >
-
-            <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:src="@drawable/ic_feedback"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_statistics_text" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/activity_help"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center" >
-
-            <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:src="@drawable/ic_help"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_help_text"/>
-
-        </LinearLayout>
-
+            </android.support.v7.widget.CardView>
 
     </LinearLayout>
+
+    <include layout="@layout/activity_lowerbar" />
 
 </LinearLayout>
