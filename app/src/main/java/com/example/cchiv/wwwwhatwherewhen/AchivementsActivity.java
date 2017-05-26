@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static com.example.cchiv.wwwwhatwherewhen.MainActivity.array_achievements_obtained;
 
@@ -74,4 +75,11 @@ public class AchivementsActivity extends AppCompatActivity {
         });
     }
 
+    public void revealQuest1(View view) {
+        Toast.makeText(this, "Install the app", Toast.LENGTH_SHORT).show();
+    }
+
+    public void revealQuest2(View view) {
+        Toast.makeText(this, "Complete the first set", Toast.LENGTH_SHORT).show();
+    }
 }

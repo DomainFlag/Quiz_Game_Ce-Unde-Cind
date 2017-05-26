@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">C.U.C</string>
     <string name="app_full_name">Ce? Unde? Cînd?</string>
+    <!--Buttons-->
+    <string name="button_submit">submit</string>
+    <string name="button_proceed">proceed</string>
+    <string name="button_answer">Answer</string>
     <!--Activity Main-->
     <string name="app_quote_text">\" The function of education is to teach one to think intensively and to think critically. Intelligence plus character - that is the goal of true education. \"</string>
-    <string name="app_question_1_text">Continue the sequence: love, breath, Rome, estate, column, sense, heaven...</string>
+    <string name="app_question_1_text">Continue the sequence: love, breath, Rome, estate, column, sense, heaven&#8230;</string>
     <string name="app_question_1_solution_text">Wonder. (The question is based upon popular set expressions: the first love, the second breath, the third Rome, the fourth estate, the fifth column, the sixth sense, the seventh heaven, and the eighth wonder.)</string>
-    <string name="app_question_1_hint_text_1">The first love...</string>
+    <string name="app_question_1_hint_text_1">The first love&#8230;</string>
     <string name="app_hint_text">Hint</string>
     <string name="app_solution_text">Solution</string>
     <string name="app_play_text">Play</string>
@@ -18,6 +22,10 @@
     <string name="points">50 points</string>
     <string name="achievements_header">Achievements</string>
     <string name="achievements_subheader">Total 0p</string>
+    <!--Activity Help-->
+    <string name="main_tip">Just play. Have fun. Enjoy the game.</string>
+    <!--Activity Feedback-->
+    <string name="activity_feedback_header">Feedback Matters</string>
     <string name="activity_feedback_question_1">Rate from 0 to 5 your satisfaction with the app?</string>
     <string name="activity_feedback_question_2">Check the features you would like to see in the upcoming new version?</string>
     <string name="activity_feedback_checkbox_0">New compelling game modes</string>
@@ -28,19 +36,51 @@
     <string name="activity_feedback_checkbox_5">Add chat feature and social network integration into the app</string>
     <string name="activity_feedback_question_3">You have any great ideas to make the app better, write it down</string>
     <string name="activity_feedback_submit">submit</string>
-    <!--Activity Help-->
-    <string name="main_tip">Just play. Have fun. Enjoy the game.</string>
-    <!--Activity Feedback-->
-    <string name="activity_feedback_header">Feedback Matters</string>
+    <string name="activity_feedback_radio_0">0</string>
+    <string name="activity_feedback_radio_1">1</string>
+    <string name="activity_feedback_radio_2">2</string>
+    <string name="activity_feedback_radio_3">3</string>
+    <string name="activity_feedback_radio_4">4</string>
+    <string name="activity_feedback_radio_5">5</string>
     <!--Activity Quiz1-->
+    <string name="app_set_1_question_1_header">Question 1</string>
+    <string name="app_set_1_question_1_subheader">Standard</string>
     <string name="app_set_1_question_1_text">In November 2014, it was reported that a number of television programmes, had been banned in military schools belonging to the Turkish army, in order to protect young people from: \"sexual exploitation, pornography, exhibitionism, abuse, harassment and all negative behaviours\" (dragons weren\'t mentioned). According to a report in the Turkish daily newspaper Cumhuriyet, this isn\'t the first time that X has caused trouble within the country\'s army. What\'s X?</string>
     <!--Activity Quiz2-->
+    <string name="app_set_1_question_2_header">Question 2</string>
+    <string name="app_set_1_question_2_subheader">Image Question</string>
     <string name="app_set_1_question_2_text">(An old map of England is given here.)\nUsing a map like this, Edmond Halley became the first to measure the area of each country in England. What simple method did he use to do so if he only knew the area of the country of Kent?</string>
     <!--Activity Quiz3-->
+    <string name="app_set_1_question_3_header">Question 3</string>
+    <string name="app_set_1_question_3_subheader">Superblitz</string>
     <string name="app_set_1_question_3_blitz_text_1">What is the word for \"lightning\" in German?</string>
     <string name="app_set_1_question_3_blitz_text_2">What place, according to Mark Twain, has the highest rate of mortality?</string>
     <!--Activity Quiz4-->
+    <string name="app_set_1_question_4_header">Question 4</string>
+    <string name="app_set_1_question_4_subheader">Black Box</string>
     <string name="app_set_1_question_4_text">No modern book has aroused so much talk as the one in the black box. What book is it?</string>
     <!--Activity Quiz5-->
+    <string name="app_set_1_question_5_header">Question 5</string>
+    <string name="app_set_1_question_5_subheader">Musical Question</string>
     <string name="app_set_1_question_5_text">(Two different pieces of music from J. S. Bach\'s exercises are played to the experts.) The black box contains a thing which can be placed between these two pieces. What is it?</string>
+    <string name="app_set_1_question_5_media_1">1st piece</string>
+    <string name="app_set_1_question_5_media_2">2nd piece</string>
+    <!--Activity Quiz6-->
+    <string name="app_set_1_question_6_header">Question 6</string>
+    <string name="app_set_1_question_6_subheader">Some awkward question(Unix bash)</string>
+    <string name="app_set_1_question_6_text">What character is \"normal\" for extended regular expressions?</string>
+    <string name="app_set_1_question_6_radio_1">#</string>
+    <string name="app_set_1_question_6_radio_2">*</string>
+    <string name="app_set_1_question_6_radio_3">+</string>
+    <string name="app_set_1_question_6_radio_4">$</string>
+    <string name="app_set_1_question_6_radio_5">(</string>
+    <string name="app_set_1_question_6_radio_6">^</string>
+    <!--Activity Quiz7-->
+    <string name="app_set_1_question_7_header">Question 7</string>
+    <string name="app_set_1_question_7_subheader">Some awkward question(Unix bash)</string>
+    <string name="app_set_1_question_7_text">What commands shows the same thing besides one?</string>
+    <string name="app_set_1_question_7_checkbox_1">echo \"a\" \"#\" \"b\"</string>
+    <string name="app_set_1_question_7_checkbox_2">echo \'a # b\'</string>
+    <string name="app_set_1_question_7_checkbox_3">echo \'a\' \# \"b\"</string>
+    <string name="app_set_1_question_7_checkbox_4">echo a # b</string>
 </resources>

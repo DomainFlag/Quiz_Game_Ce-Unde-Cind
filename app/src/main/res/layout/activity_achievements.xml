@@ -10,7 +10,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -55,7 +55,7 @@
                             android:layout_width="75dp"
                             android:layout_height="75dp"
                             android:src="@drawable/ic_baby_owl"
-                            android:onClick="reveal_quest_1"/>
+                            android:onClick="revealQuest1"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
                             android:layout_width="75dp"
                             android:layout_height="75dp"
                             android:src="@drawable/ic_first_set_completed"
-                            android:onClick="reveal_quest_2"/>
+                            android:onClick="revealQuest2"/>
 
                         <TextView
                             android:layout_width="wrap_content"

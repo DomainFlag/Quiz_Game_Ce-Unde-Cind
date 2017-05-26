@@ -8,8 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,7 +41,7 @@ public class QuizActivity extends AppCompatActivity{
     /**
      * Media Player Setting
      */
-    public void set_music_1(View view) {
+    public void setMedia1(View view) {
         if(MP1 == null) {
             if(MP2 != null) {
                 MP2.stop();
@@ -52,7 +55,7 @@ public class QuizActivity extends AppCompatActivity{
         }
     }
 
-    public void set_music_2(View view) {
+    public void setMedia2(View view) {
         if(MP2 == null) {
             if(MP1 != null) {
                 MP1.stop();
@@ -69,7 +72,7 @@ public class QuizActivity extends AppCompatActivity{
      * Matcher for quiz questions
      * */
 
-    public String set_toast_text(String pattern, String answer, String correctAnswer) {
+    public String setToastText(String pattern, String answer, String correctAnswer) {
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(answer);
         String toastText;
@@ -80,7 +83,7 @@ public class QuizActivity extends AppCompatActivity{
         return toastText;
     }
 
-    public String set__blitz_toast_text(String pattern1, String pattern2, String answer1, String answer2, String correctAnswer) {
+    public String setBlitzToastText(String pattern1, String pattern2, String answer1, String answer2, String correctAnswer) {
         Pattern p1 = Pattern.compile(pattern1);
         Matcher m1 = p1.matcher(answer1);
 
@@ -97,60 +100,89 @@ public class QuizActivity extends AppCompatActivity{
     }
 
 
-    public void activity_quiz_set_question_2(View view) {
+    public void activityQuizSetQuestion2(View view) {
         EditText editText = (EditText) findViewById(R.id.answer);
         String answer = editText.getEditableText().toString().toLowerCase();
 
-        String toastText = set_toast_text("(game).*(throne)", answer, "Games of Thrones");
+        String toastText = setToastText("(game).*(throne)", answer, "Games of Thrones");
 
         Toast.makeText(this, toastText, Toast.LENGTH_LONG).show();
         setContentView(R.layout.activity_quiz_question_2);
     }
 
-    public void activity_quiz_set_question_3(View view) {
+    public void activityQuizSetQuestion3(View view) {
         EditText editText = (EditText) findViewById(R.id.answer);
         String answer = editText.getEditableText().toString();
 
-        String toastText = set_toast_text("(cut|slice).*(map|part|counties).*(area|surface)", answer, "He cut out and weighed separately each of the counties. Then he could easily evaluate the area of each county based on the area/weight relationship calculated from the weight and area of Kent known to him.");
+        String toastText = setToastText("(cut|slice).*(map|part|counties).*(area|surface)", answer, "He cut out and weighed separately each of the counties. Then he could easily evaluate the area of each county based on the area/weight relationship calculated from the weight and area of Kent known to him.");
 
         Toast.makeText(this, toastText, Toast.LENGTH_LONG).show();
         setContentView(R.layout.activity_quiz_question_3);
     }
 
-    public void activity_quiz_set_question_4(View view) {
+    public void activityQuizSetQuestion4(View view) {
         EditText editText1 = (EditText) findViewById(R.id.answer_1);
         String answer1 = editText1.getEditableText().toString();
 
         EditText editText2 = (EditText) findViewById(R.id.answer_2);
         String answer2 = editText2.getEditableText().toString();
 
-        String toastText = set__blitz_toast_text("(blitz)", "(bed|couch)", answer1, answer2, "No need for explanation, basic knowledge");
+        String toastText = setBlitzToastText("(blitz)", "(bed|couch)", answer1, answer2, "No need for explanation, basic knowledge");
 
         Toast.makeText(this, toastText, Toast.LENGTH_LONG).show();
         setContentView(R.layout.activity_quiz_question_4);
     }
 
-    public void activity_quiz_set_question_5(View view) {
+    public void activityQuizSetQuestion5(View view) {
         EditText editText = (EditText) findViewById(R.id.answer);
         String answer = editText.getEditableText().toString();
 
-        String toastText = set_toast_text("(telephone|phone|yellow|white)", answer, "A telephone book, or the white/yellow pages, is a listing of telephone subscribers in a geographical area or subscribers to services provided by the organization that publishes the directory. Its purpose is to allow the telephone number of a subscriber identified by name and address to be found.");
+        String toastText = setToastText("(telephone|phone|yellow|white)", answer, "A telephone book, or the white/yellow pages, is a listing of telephone subscribers in a geographical area or subscribers to services provided by the organization that publishes the directory. Its purpose is to allow the telephone number of a subscriber identified by name and address to be found.");
 
         Toast.makeText(this, toastText, Toast.LENGTH_LONG).show();
         setContentView(R.layout.activity_quiz_question_5);
     }
 
-    public void activity_quiz_set_score_screen(View view) {
+    public void activityQuizSetQuestion6(View view) {
         EditText editText = (EditText) findViewById(R.id.answer);
         String answer = editText.getEditableText().toString();
 
-        String toastText = set_toast_text("(mirror|reflector|glass|reflect|cancer|twitch|forsen)", answer, "A mirror (Either piece of cancer is the reverse version of the other.)");
+        String toastText = setToastText(".*", answer, "Any answer, this question needs revising.");
 
         Toast.makeText(this, toastText, Toast.LENGTH_LONG).show();
-        activity_score_screen();
+        setContentView(R.layout.activity_quiz_question_6);
     }
 
-    public void activity_score_screen() {
+    public void activityQuizSetQuestion7(View view) {
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radio_group);
+        String toastText = "Incorrect solution, correct one: #";
+        if(radioGroup.getCheckedRadioButtonId() != -1) {
+            int selectId = radioGroup.getCheckedRadioButtonId();
+            RadioButton radioButton = (RadioButton) findViewById(selectId);
+            if(radioButton.getText().toString().equals("#")) {
+                score++;
+                toastText = "Correct Solution";
+            }
+        }
+        Toast.makeText(this, toastText, Toast.LENGTH_LONG).show();
+        setContentView(R.layout.activity_quiz_question_7);
+    }
+
+    public void activityQuizSetScoreScreen(View view) {
+        String toastText = "Incorrect solution, correct one: 1st, 2nd, 3rd";
+        CheckBox checkBox1 = (CheckBox) findViewById(R.id.check_1);
+        CheckBox checkBox2 = (CheckBox) findViewById(R.id.check_2);
+        CheckBox checkBox3 = (CheckBox) findViewById(R.id.check_3);
+        CheckBox checkBox4 = (CheckBox) findViewById(R.id.check_4);
+        if(checkBox1.isChecked() && checkBox2.isChecked() && checkBox3.isChecked() && !checkBox4.isChecked()) {
+            score++;
+            toastText = "Correct Answer";
+        }
+        Toast.makeText(this, toastText, Toast.LENGTH_LONG).show();
+        activityScoreScreen();
+    }
+
+    public void activityScoreScreen() {
         setContentView(R.layout.activity_score_screen);
 
         array_achievements_obtained[1] = true;
@@ -158,7 +190,7 @@ public class QuizActivity extends AppCompatActivity{
 
         TextView textView;
         textView = (TextView) findViewById(R.id.opening_message_text);
-        textView.setText("Congrats :D");
+        textView.setText("Congrats");
 
         textView = (TextView) findViewById(R.id.score_text);
         textView.setText(score + " points");
@@ -171,7 +203,7 @@ public class QuizActivity extends AppCompatActivity{
         imageView.setImageResource(R.drawable.ic_first_set_completed);
 
         TextView textViewPopup = (TextView) layout.findViewById(R.id.text_popup);
-        textViewPopup.setText("Finished first set. You are growing very fast. Keep it up! :)");
+        textViewPopup.setText("Complete the first set");
 
         Toast toast = new Toast(getApplicationContext());
         toast.setGravity(Gravity.FILL_HORIZONTAL | Gravity.TOP, 0, 0);

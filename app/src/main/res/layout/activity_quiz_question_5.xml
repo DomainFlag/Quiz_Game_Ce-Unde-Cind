@@ -14,11 +14,11 @@
 
             <TextView
                 style="@style/AppQuestionHeader"
-                android:text="Question 5" />
+                android:text="@string/app_set_1_question_5_header" />
 
             <TextView
                 style="@style/AppQuestionSubheader"
-                android:text="(musical question)" />
+                android:text="@string/app_set_1_question_5_subheader" />
 
             <ScrollView
                 style="@style/AppQuestionScroll" >
@@ -54,8 +54,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="@dimen/activity_horizontal_margin"
                             android:backgroundTint="@color/colorPrimary"
-                            android:text="1st piece"
-                            android:onClick="set_music_1"
+                            android:text="@string/app_set_1_question_5_media_1"
+                            android:onClick="setMedia1"
                             android:textColor="@color/textIcons" />
 
                         <Button
@@ -63,8 +63,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="@color/colorPrimary"
-                            android:text="2st piece"
-                            android:onClick="set_music_2"
+                            android:text="@string/app_set_1_question_5_media_2"
+                            android:onClick="setMedia2"
                             android:textColor="@color/textIcons" />
 
                     </LinearLayout>
@@ -83,12 +83,12 @@
         <EditText
             android:id="@+id/answer"
             style="@style/AppActionInput"
-            android:hint="Answer" />
+            android:hint="@string/button_answer" />
 
         <Button
             style="@style/AppActionButton"
-            android:onClick="activity_quiz_set_score_screen"
-            android:text="Answer"/>
+            android:onClick="activityQuizSetQuestion6"
+            android:text="@string/button_answer"/>
 
     </LinearLayout>
 

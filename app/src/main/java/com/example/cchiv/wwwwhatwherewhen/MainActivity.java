@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         imageView.setImageResource(R.drawable.ic_baby_owl);
 
         TextView textView = (TextView) layout.findViewById(R.id.text_popup);
-        textView.setText("Welcome baby owl to Ce? Unde? Cind? Your adventure begins right now.");
+        textView.setText("Install the app");
 
         Toast toast = new Toast(getApplicationContext());
         toast.setGravity(Gravity.FILL_HORIZONTAL | Gravity.TOP, 0, 0);
@@ -113,15 +113,7 @@ public class MainActivity extends AppCompatActivity {
      */
 
     /****************************************************/
-    public void reveal_quest_1(View view) {
-        Toast.makeText(this, "Install the app", Toast.LENGTH_SHORT).show();
-    }
-
-    public void reveal_quest_2(View view) {
-        Toast.makeText(this, "Complete the first set", Toast.LENGTH_SHORT).show();
-    }
-
-    public void show_hint(View view) {
+    public void showHint(View view) {
         Toast.makeText(this, question_day_hint_strings[index], Toast.LENGTH_SHORT).show();
         index = (index+1)%3;
     }

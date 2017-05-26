@@ -108,7 +108,7 @@
                             android:layout_marginLeft="@dimen/activity_horizontal_margin"
                             android:layout_marginRight="@dimen/activity_horizontal_margin"
                             android:backgroundTint="@color/lightPrimaryColor"
-                            android:onClick="show_hint"
+                            android:onClick="showHint"
                             android:text="@string/app_hint_text"
                             android:textColor="@color/primaryText"
                             android:textColorHighlight="@color/colorPrimaryDark" />

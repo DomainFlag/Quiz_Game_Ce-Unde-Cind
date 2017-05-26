@@ -14,11 +14,11 @@
 
             <TextView
                 style="@style/AppQuestionHeader"
-                android:text="Question 2" />
+                android:text="@string/app_set_1_question_2_header" />
 
             <TextView
                 style="@style/AppQuestionSubheader"
-                android:text="(image question)" />
+                android:text="@string/app_set_1_question_2_subheader" />
 
             <ScrollView
                 style="@style/AppQuestionScroll">
@@ -47,12 +47,12 @@
         <EditText
             android:id="@+id/answer"
             style="@style/AppActionInput"
-            android:hint="Answer" />
+            android:hint="@string/button_answer" />
 
         <Button
             style="@style/AppActionButton"
-            android:text="Answer"
-            android:onClick="activity_quiz_set_question_3"/>
+            android:text="@string/button_answer"
+            android:onClick="activityQuizSetQuestion3"/>
 
     </LinearLayout>
 

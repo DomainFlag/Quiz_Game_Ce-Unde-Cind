@@ -14,14 +14,14 @@
 
             <TextView
                 style="@style/AppQuestionHeader"
-                android:text="Question 3" />
+                android:text="@string/app_set_1_question_3_header" />
 
             <TextView
                 style="@style/AppQuestionSubheader"
-                android:text="(superblitz)" />
+                android:text="@string/app_set_1_question_3_subheader" />
 
             <ScrollView
-                style="@style/AppQuestionScroll" >
+                style="@style/AppQuestionBlitzScroll" >
 
                 <TextView
                     style="@style/AppQuestionText"
@@ -35,7 +35,7 @@
 
     <EditText
         android:id="@+id/answer_1"
-        android:hint="Answer"
+        android:hint="@string/button_answer"
         style="@style/AppQuestionBlitzInput" />
 
     <android.support.v7.widget.CardView
@@ -59,12 +59,12 @@
         <EditText
             android:id="@+id/answer_2"
             style="@style/AppActionInput"
-            android:hint="Answer"/>
+            android:hint="@string/button_answer"/>
 
         <Button
             style="@style/AppActionButton"
-            android:text="Answer"
-            android:onClick="activity_quiz_set_question_4"/>
+            android:text="@string/button_answer"
+            android:onClick="activityQuizSetQuestion4"/>
 
     </LinearLayout>
 

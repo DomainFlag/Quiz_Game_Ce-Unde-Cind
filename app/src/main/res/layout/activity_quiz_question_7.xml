@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/AppMainLayout">
+
+    <android.support.v7.widget.CardView
+        style="@style/AppCard"
+        app:cardBackgroundColor="@color/lightPrimaryColor"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            style="@style/AppCardLayout">
+
+            <TextView
+                style="@style/AppQuestionHeader"
+                android:text="@string/app_set_1_question_7_header" />
+
+            <TextView
+                style="@style/AppQuestionSubheader"
+                android:text="@string/app_set_1_question_7_subheader" />
+
+            <ScrollView
+                style="@style/AppQuestionScroll" >
+
+                <LinearLayout
+                    android:gravity="center"
+                    style="@style/AppImageQuestionLayout" >
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primaryText"
+                        android:textSize="@dimen/activity_paragraph_size"
+                        android:text="@string/app_set_1_question_7_text" />
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/check_1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_set_1_question_7_checkbox_1"/>
+
+                        <CheckBox
+                            android:id="@+id/check_2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_set_1_question_7_checkbox_2"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/check_3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_set_1_question_7_checkbox_3"/>
+
+                        <CheckBox
+                            android:id="@+id/check_4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_set_1_question_7_checkbox_4"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        style="@style/AppActionButton"
+        android:onClick="activityQuizSetScoreScreen"
+        android:text="@string/button_answer"/>
+
+</LinearLayout>
